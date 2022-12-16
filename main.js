@@ -33,7 +33,7 @@ function addBookToLibrary() {
   let author = document.getElementById("author").value;
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
-  myLibrary.push(new Book (title, author, pages, read));
+  myLibrary.push(new Book(title, author, pages, read));
   console.log(myLibrary);
   clearForm();
 }
