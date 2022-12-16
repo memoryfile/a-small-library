@@ -37,3 +37,12 @@ function addBookToLibrary() {
   console.log(myLibrary);
   clearForm();
 }
+
+// let list = document.getElementById("myList");
+
+// myLibrary.forEach((item) => {
+//   let li = document.createElement("li");
+//   let title = myLibrary.title;
+//   li.innerText = title;
+//   list.appendChild(li);
+// });
