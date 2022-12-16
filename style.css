@@ -18,6 +18,10 @@
   src: url("../fonts/Bellota/Bellota-Regular.ttf");
 }
 
+#container {
+  display: flex;
+}
+
 /* Intro */
 
 p.title {
@@ -76,6 +80,6 @@ button:focus-visible {
 
 /* Footer */
 
-.footer > p {
+/* .footer > p {
   font-family: Bellota-Regular;
-}
+} */
