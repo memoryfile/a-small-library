@@ -13,6 +13,10 @@
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
+p, label {
+  font-family: Roboto-Regular;
+}
+
 /* CSS */
 button {
   background-color: whitesmoke;
