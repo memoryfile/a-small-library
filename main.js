@@ -3,9 +3,6 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-  // this.sayTitle = function () {
-  //   console.log(title);
-  // };
 }
 
 const malibu = new Book(
@@ -36,10 +33,7 @@ function addBookToLibrary() {
   let author = document.getElementById("author").value;
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
-  // Pushes these variables individually instead of creating new Book with them
   myLibrary.push(new Book (title, author, pages, read));
   console.log(myLibrary);
   clearForm();
 }
-
-// addBookToLibrary();
