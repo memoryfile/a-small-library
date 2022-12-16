@@ -21,6 +21,11 @@ const seaOfTranquility = new Book(
 
 let myLibrary = [malibu, seaOfTranquility];
 
+const bookInfo = myLibrary.map(
+  (Book) => `${Book.title} ${Book.author} ${Book.pages} ${Book.read}`
+);
+console.log(bookInfo);
+
 function clearForm() {
   document.getElementById("title").value = "";
   document.getElementById("author").value = "";
@@ -36,13 +41,25 @@ function addBookToLibrary() {
   myLibrary.push(new Book(title, author, pages, read));
   console.log(myLibrary);
   clearForm();
+  updateCards();
 }
 
 let list = document.getElementById("myList");
 
-myLibrary.forEach((item) => {
+// function updateCards() {
+//   let list = document.getElementById("myList");
+// }
+
+function existingBooks() {
   let li = document.createElement("li");
-  let title = myLibrary.title;
-  li.innerText = title;
-  list.appendChild(li);
-});
+    li.innerText = bookInfo;
+    list.appendChild(li);
+}
+
+  // myLibrary.forEach((item) => {
+  //   let li = document.createElement("li");
+  //   li.innerText = bookInfo;
+  //   list.appendChild(li);
+  // });
+
+existingBooks();
