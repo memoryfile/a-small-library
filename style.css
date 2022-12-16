@@ -81,8 +81,9 @@ button:focus-visible {
 /* Cards */
 
 .layout {
-  width: 1920px;
-  height: 1080px;
+  width: 1500px;
+  height: 1500px;
+  justify-self: center;
 
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
@@ -90,8 +91,19 @@ button:focus-visible {
   gap: 8px;
 }
 
+.layout > div {
+  border: medium dashed black;
+  background-color: #69D2E7;
+  border-radius: 5px;
+  margin: 10px;
+}
+
 /* Footer */
 
-/* .footer > p {
+.footer {
+  display: grid;
+}
+.footer > p {
   font-family: Bellota-Regular;
-} */
+  justify-self: center;
+}
