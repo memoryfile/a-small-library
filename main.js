@@ -42,24 +42,28 @@ function addBookToLibrary() {
   console.log(myLibrary);
   clearForm();
   updateCards();
+  existingBooks();
 }
 
 let list = document.getElementById("myList");
 
-// function updateCards() {
-//   let list = document.getElementById("myList");
-// }
+// WIP
+function updateCards() {
+  let list = document.getElementById("myList");
+  list = "";
+  existingBooks();
+}
 
 function existingBooks() {
   let li = document.createElement("li");
-    li.innerText = bookInfo;
-    list.appendChild(li);
+  li.innerText = bookInfo;
+  list.appendChild(li);
 }
 
-  // myLibrary.forEach((item) => {
-  //   let li = document.createElement("li");
-  //   li.innerText = bookInfo;
-  //   list.appendChild(li);
-  // });
+// myLibrary.forEach((item) => {
+//   let li = document.createElement("li");
+//   li.innerText = bookInfo;
+//   list.appendChild(li);
+// });
 
 existingBooks();
