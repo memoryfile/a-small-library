@@ -37,7 +37,7 @@ function addBookToLibrary() {
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
   // Pushes these variables individually instead of creating new Book with them
-  myLibrary.push(title, author, pages, read);
+  myLibrary.push(new Book (title, author, pages, read));
   console.log(myLibrary);
   clearForm();
 }
