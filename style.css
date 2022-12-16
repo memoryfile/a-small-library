@@ -40,6 +40,26 @@ p {
   padding: 20px;
 }
 
+/* Form */
+
+.form {
+  display: grid;
+}
+
+.form > div {
+  justify-self: center;
+}
+
+/* Buttons */
+
+.buttons {
+  display: grid;
+}
+
+.buttons > button {
+  justify-self: center;
+}
+
 /* Button 39 from Tailwind https://getcssscan.com/css-buttons-examples */
 button {
   background-color: whitesmoke;
@@ -78,14 +98,6 @@ button:focus-visible {
 .container {
   display: grid;
   grid-template-columns: 0.2fr 3fr 1fr;
-}
-
-.buttons {
-  display: flex;
-}
-
-.buttons > button {
-  align-content: center;
 }
 
 /* Cards */
