@@ -22,11 +22,11 @@ const seaOfTranquility = new Book(
   "Not read"
 );
 
-let myLibrary = [malibu, seaOfTranquility];
+let myLibrary = [malibu];
 
 function addBookToLibrary() {
-  if (Book.isBook(true)) {
-    myLibrary.push(this);
+    myLibrary.push(seaOfTranquility);
     console.log(myLibrary);
   }
-}
+
+addBookToLibrary();
