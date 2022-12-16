@@ -73,3 +73,9 @@ button:focus-visible {
 .libraryconfig > button {
   align-content: center;
 }
+
+/* Footer */
+
+.footer > p {
+  font-family: Bellota-Regular;
+}
