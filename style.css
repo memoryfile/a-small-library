@@ -12,6 +12,19 @@
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
+@font-face {
+  font-family: Bellota-Regular;
+  font-style: normal;
+  src: url("../fonts/Bellota/Bellota-Regular.ttf");
+}
+
+/* Intro */
+
+p.title {
+  font-size: 500%;
+  font-weight: bolder;
+  font-family: Bellota-Regular;
+}
 
 /* Button 39 from Tailwind https://getcssscan.com/css-buttons-examples */
 button {
