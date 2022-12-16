@@ -80,11 +80,11 @@ button:focus-visible {
   grid-template-columns: 0.2fr 3fr 1fr;
 }
 
-.libraryconfig {
+.buttons {
   display: flex;
 }
 
-.libraryconfig > button {
+.buttons > button {
   align-content: center;
 }
 
@@ -103,7 +103,7 @@ button:focus-visible {
 
 .layout > div {
   border: medium dashed black;
-  background-color: #69D2E7;
+  background-color: #69d2e7;
   border-radius: 5px;
   margin: 10px;
 }
