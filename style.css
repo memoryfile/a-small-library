@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   font-family: Roboto-Regular;
-  list-style-type: none;
 }
 
 @font-face {
@@ -118,6 +117,11 @@ button:focus-visible {
   background-color: #69d2e7;
   border-radius: 5px;
   margin: 10px;
+}
+
+/* Non-functioning - how should I reference the inner card text? */
+.layout > li {
+  display: grid;
 }
 
 /* Footer */
