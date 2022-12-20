@@ -1,3 +1,5 @@
+let list = document.getElementById("myList");
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -19,7 +21,11 @@ const seaOfTranquility = new Book(
   "Not read"
 );
 
+// Array
+
 let myLibrary = [malibu, seaOfTranquility];
+
+let myLibrarysLastItem = myLibrary.slice(-1);
 
 // Library array mapping
 
@@ -57,19 +63,21 @@ function addBookToLibrary() {
   }
 }
 
-let list = document.getElementById("myList");
+function existingBooks() {
+  let wholeList = document.createElement("li");
+  wholeList.innerText = cardBookInfo;
+  list.appendChild(wholeList);
+}
+
+function addBookToLastCard() {
+  let 
+}
 
 // WIP
 function updateCards() {
-  let list = document.getElementById("myList");
+  // let list = document.getElementById("myList");
   list = "";
   existingBooks();
-}
-
-function existingBooks() {
-  let li = document.createElement("li");
-  li.innerText = cardBookInfo;
-  list.appendChild(li);
 }
 
 // myLibrary.forEach((item) => {
