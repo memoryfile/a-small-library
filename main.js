@@ -38,11 +38,15 @@ function addBookToLibrary() {
   let author = document.getElementById("author").value;
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
-  myLibrary.push(new Book(title, author, pages, read));
-  console.log(myLibrary);
-  clearForm();
-  updateCards();
-  existingBooks();
+  if (!(title = "") || !(author = "") || !(pages = "")) {
+    myLibrary.push(new Book(title, author, pages, read));
+    console.log(myLibrary);
+    clearForm();
+    updateCards();
+    existingBooks();
+  } else {
+    alert("No");
+  }
 }
 
 let list = document.getElementById("myList");
