@@ -21,10 +21,18 @@ const seaOfTranquility = new Book(
 
 let myLibrary = [malibu, seaOfTranquility];
 
+// Library array mapping
+
 const bookInfo = myLibrary.map(
-  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished? ${Book.read} \n \n`
+  (Book) => `${Book.title} ${Book.author} ${Book.pages} ${Book.read}`
 );
 console.log(bookInfo);
+
+const cardBookInfo = myLibrary.map(
+  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished? ${Book.read} \n \n`
+);
+
+// Functions
 
 function clearForm() {
   document.getElementById("title").value = "";
@@ -60,7 +68,7 @@ function updateCards() {
 
 function existingBooks() {
   let li = document.createElement("li");
-  li.innerText = bookInfo;
+  li.innerText = cardBookInfo;
   list.appendChild(li);
 }
 
