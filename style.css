@@ -46,6 +46,10 @@ p {
 }
 
 .form > div {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 10px;
+  padding-bottom: 10px;
   justify-self: center;
 }
 
