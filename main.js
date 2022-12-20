@@ -22,7 +22,7 @@ const seaOfTranquility = new Book(
 let myLibrary = [malibu, seaOfTranquility];
 
 const bookInfo = myLibrary.map(
-  (Book) => `${Book.title} ${Book.author} ${Book.pages} ${Book.read}`
+  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished? ${Book.read} \n \n`
 );
 console.log(bookInfo);
 
