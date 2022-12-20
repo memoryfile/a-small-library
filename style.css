@@ -57,9 +57,14 @@ p {
 
 .buttons {
   display: grid;
+  grid-auto-flow: row;
+  padding-bottom: 15px;
+  gap: 15px;
+  padding-top: 15px;
 }
 
 .buttons > button {
+  display: grid;
   justify-self: center;
 }
 
