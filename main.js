@@ -29,7 +29,7 @@ const bookInfo = myLibrary.map(
 console.log(bookInfo);
 
 const cardBookInfo = myLibrary.map(
-  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished? ${Book.read} \n \n`
+  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read} \n \n`
 );
 
 // Functions
