@@ -1,4 +1,5 @@
-let list = document.getElementById("myList");
+let wholeArrayList = document.getElementById("myList");
+let lastCardList = document.getElementById("card2")
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -38,6 +39,10 @@ const cardBookInfo = myLibrary.map(
   (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read} \n \n`
 );
 
+const itemBookInfo = myLibrarysLastItem.map(
+  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read}`
+);
+
 // Functions
 
 function clearForm() {
@@ -66,16 +71,17 @@ function addBookToLibrary() {
 function existingBooks() {
   let wholeList = document.createElement("li");
   wholeList.innerText = cardBookInfo;
-  list.appendChild(wholeList);
+  wholeArrayList.appendChild(wholeList);
 }
 
 function addBookToLastCard() {
-  let 
+  let wholeList = document.createElement("li");
+  wholeList.innerText = itemBookInfo;
+  lastCardList.appendChild(wholeList); 
 }
 
 // WIP
 function updateCards() {
-  // let list = document.getElementById("myList");
   list = "";
   existingBooks();
 }
@@ -87,3 +93,4 @@ function updateCards() {
 // });
 
 existingBooks();
+addBookToLastCard();
