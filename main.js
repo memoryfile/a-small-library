@@ -1,5 +1,6 @@
 let wholeArrayList = document.getElementById("myList");
-let lastCardList = document.getElementById("card2")
+let lastCardList = document.getElementById("card2");
+let layoutList = document.querySelectorAll("ul > li:last-child");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -35,14 +36,16 @@ const bookInfo = myLibrary.map(
 );
 console.log(bookInfo);
 // Use bookInfo.length to auto-generate # of cards.
-console.log(bookInfo.length)
+console.log(bookInfo.length);
 
 const cardBookInfo = myLibrary.map(
-  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read} \n \n`
+  (Book) =>
+    `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read} \n \n`
 );
 
 const itemBookInfo = myLibrarysLastItem.map(
-  (Book) => `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read}`
+  (Book) =>
+    `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read}`
 );
 
 // Functions
@@ -78,11 +81,16 @@ function existingBooks() {
   wholeArrayList.appendChild(wholeList);
 }
 
-// // Provides the last array item and adds it to a card.
+// Provides the last array item and adds it to a card.
 function addBookToLastCard() {
   let wholeList = document.createElement("li");
   wholeList.innerText = itemBookInfo;
-  lastCardList.appendChild(wholeList); 
+  lastCardList.appendChild(wholeList);
+}
+
+// Generate new cards with values mapped to array values.
+function newCard() {
+  
 }
 
 // WIP - clears list of books and adds updated array list back.
@@ -97,5 +105,9 @@ function addBookToLastCard() {
 //   list.appendChild(li);
 // });
 
+// Functions to initialize web page with.
+
+// To show list of books on last card.
 existingBooks();
+// To add last value in the array to card 2.
 addBookToLastCard();
