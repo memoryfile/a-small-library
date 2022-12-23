@@ -1,7 +1,7 @@
 let wholeArrayList = document.getElementById("myList");
-// let lastCardList = document.getElementById("card2");
-// let cards = document.querySelectorAll("ul");
 let cards = document.getElementById("cardText")
+let layout = document.getElementById("layout")
+let list = document.createElement("li");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -67,37 +67,43 @@ function addBookToLibrary() {
   let author = document.getElementById("author").value;
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
-  if (!(title = "") || !(author = "") || !(pages = "")) {
+  if (!(title == "" && author == "" && pages == "")) {
     myLibrary.push(new Book(title, author, pages, read));
     console.log(myLibrary);
     clearForm();
+
     // updateCards();
-    existingBooks();
+    // existingBooks();
+    
+    // Alert seems to not be functioning
   } else {
     alert("No");
   }
 }
 
 // Provides a legible list of all array items and adds it to a card.
-function existingBooks() {
-  let wholeList = document.createElement("li");
-  wholeList.innerText = cardBookInfo;
-  cards.appendChild(wholeList);
-}
+// function existingBooks() {
+//   list.innerText = cardBookInfo;
+//   cards.appendChild(list);
+// }
 
 // Provides the last array item and adds it to a card.
-function fillCards() {
-  let wholeList = document.createElement("li");
-  wholeList.innerText = itemBookInfo;
-  myLibrary.forEach(length => cards.appendChild(wholeList));
-}
+// function fillCards() {
+//   list.innerText = itemBookInfo;
+//   for (let i = 0; i < myLibrary.length; i++) {
+//     list += myLibrary[i];
+//     cards.append(itemBookInfo);
+//     } 
+  // list.innerText = itemBookInfo;
+  // myLibrary.forEach(length => cards.appendChild(list));
+// }
 
 // Generate new cards with values mapped to array values.
 function newCard() {}
 
-function clearCards() {
-  cards.appendChild("");
-}
+// function clearCards() {
+//   cards.appendChild("");
+// }
 
 // WIP - clears list of books and adds updated array list back.
 // function updateCards() {
@@ -114,6 +120,13 @@ function clearCards() {
 // Functions to initialize web page with.
 
 // To show list of books on last card.
-existingBooks();
+// existingBooks();
+
 // To fill each card with info.
 fillCards();
+
+// function addtoLayout() {
+//   layout.createElement("li");
+// }
+
+// addtoLayout();
