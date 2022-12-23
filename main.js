@@ -105,7 +105,7 @@ function fillCards() {
 function newCard() {}
 
 // function clearCards() {
-//   cards.appendChild("");
+//   cards.append("");
 // }
 
 // WIP - clears list of books and adds updated array list back.
@@ -117,6 +117,8 @@ function newCard() {}
 function clearMyLibrary() {
   myLibrary.length = 0;
   myLibrary;
+  console.log(myLibrary);
+  // cards.append("");
 }
 
 // myLibrary.forEach((item) => {
