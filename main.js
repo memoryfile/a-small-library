@@ -30,6 +30,8 @@ let myLibrary = [malibu, seaOfTranquility];
 
 let myLibrarysLastItem = myLibrary.slice(-1);
 
+let length = myLibrary.length;
+
 // Library array mapping
 
 const bookInfo = myLibrary.map(
@@ -44,6 +46,7 @@ const cardBookInfo = myLibrary.map(
     `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read} \n \n`
 );
 
+// Returns the last item in the array's info.
 const itemBookInfo = myLibrarysLastItem.map(
   (Book) =>
     `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read}`
@@ -84,10 +87,9 @@ function existingBooks() {
 
 // Provides the last array item and adds it to a card.
 function fillCards() {
-  myLibrary.forEach(myLibrary => console.log(myLibrary));
   let wholeList = document.createElement("li");
   wholeList.innerText = itemBookInfo;
-  cards.appendChild(wholeList);
+  myLibrary.forEach(length => cards.appendChild(wholeList));
 }
 
 // Generate new cards with values mapped to array values.
