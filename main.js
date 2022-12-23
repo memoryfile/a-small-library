@@ -1,6 +1,6 @@
 let wholeArrayList = document.getElementById("myList");
-let cards = document.getElementById("cardText")
-let layout = document.getElementById("layout")
+let cards = document.getElementById("cardText");
+let layout = document.getElementById("layout");
 let list = document.createElement("li");
 
 function Book(title, author, pages, read) {
@@ -74,7 +74,7 @@ function addBookToLibrary() {
 
     // updateCards();
     // existingBooks();
-    
+    fillCards();
     // Alert seems to not be functioning
   } else {
     alert("No");
@@ -92,8 +92,8 @@ function fillCards() {
   list.innerText = itemBookInfo;
   for (let i = 0; i < myLibrary.length; i++) {
     list += myLibrary[i];
-    cards.append(itemBookInfo);
-    } 
+    cards.append(cardBookInfo);
+  }
   // list.innerText = itemBookInfo;
   // myLibrary.forEach(length => cards.appendChild(list));
 }
@@ -109,7 +109,12 @@ function newCard() {}
 // function updateCards() {
 //   wholeArrayList = "";
 //   existingBooks();
-// }
+// }  
+
+function clearMyLibrary() {
+  myLibrary.length = 0;
+  myLibrary;
+}
 
 // myLibrary.forEach((item) => {
 //   let li = document.createElement("li");
