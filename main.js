@@ -88,15 +88,15 @@ function addBookToLibrary() {
 // }
 
 // Provides the last array item and adds it to a card.
-// function fillCards() {
-//   list.innerText = itemBookInfo;
-//   for (let i = 0; i < myLibrary.length; i++) {
-//     list += myLibrary[i];
-//     cards.append(itemBookInfo);
-//     } 
+function fillCards() {
+  list.innerText = itemBookInfo;
+  for (let i = 0; i < myLibrary.length; i++) {
+    list += myLibrary[i];
+    cards.append(itemBookInfo);
+    } 
   // list.innerText = itemBookInfo;
   // myLibrary.forEach(length => cards.appendChild(list));
-// }
+}
 
 // Generate new cards with values mapped to array values.
 function newCard() {}
