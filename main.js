@@ -1,6 +1,9 @@
 let wholeArrayList = document.getElementById("myList");
 let cards = document.getElementById("cardText");
-let layout = document.getElementById("layout");
+// let layout = document.getElementById(".layout");
+// let layoutCards = layout.querySelectorAll("#card");
+let cardsText = cards.querySelectorAll("#cardText");
+// Try cardsText.createElement
 let list = document.createElement("li");
 
 function Book(title, author, pages, read) {
