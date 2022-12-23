@@ -77,7 +77,7 @@ function addBookToLibrary() {
     fillCards();
     // Alert seems to not be functioning
   } else {
-    alert("No");
+    alert("Please fill out every form entry.");
   }
 }
 
@@ -109,7 +109,7 @@ function newCard() {}
 // function updateCards() {
 //   wholeArrayList = "";
 //   existingBooks();
-// }  
+// }
 
 function clearMyLibrary() {
   myLibrary.length = 0;
