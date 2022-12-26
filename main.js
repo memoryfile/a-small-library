@@ -53,3 +53,8 @@ function clearForm() {
   document.getElementById("pages").value = "";
   document.getElementById("read").value = "";
 }
+
+function removeBook() {
+    myLibrary.pop();
+    console.log("Removing the last book in the array.")
+}
