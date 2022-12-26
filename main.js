@@ -34,10 +34,14 @@ const seaOfTranquility = new Book(
 
 let myLibrary = [malibu, seaOfTranquility];
 
+// let editableMyLibrary = myLibrary;
+
 let bookTitle = myLibrary[0].title;
 console.log(bookTitle);
 
-let myLibrarysLastItem = myLibrary.slice(-1);
+function removeBook() {
+  myLibrary.pop();
+}
 
 let length = myLibrary.length;
 
@@ -56,10 +60,10 @@ const cardBookInfo = myLibrary.map(
 );
 
 // Returns the last item in the array's info.
-const itemBookInfo = myLibrarysLastItem.map(
-  (Book) =>
-    `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read}`
-);
+// const itemBookInfo = myLibrarysLastItem.map(
+//   (Book) =>
+//     `Title: ${Book.title} \n Author: ${Book.author} \n Total pages in book: ${Book.pages} \n Finished?: ${Book.read}`
+// );
 
 // Functions
 
@@ -95,7 +99,7 @@ function addBookToLibrary() {
 
 // Provides the last array item and adds it to a card.
 function fillCards() {
-  list.innerText = itemBookInfo;
+  list.innerText = cardBookInfo;
   for (let i = 0; i < myLibrary.length; i++) {
     list += myLibrary[i];
     cards.append(bookTitle);
