@@ -32,6 +32,15 @@ const seaOfTranquility = new Book(
 
 let myLibrary = [malibu, seaOfTranquility];
 
+let bookTitle = myLibrary[1].title;
+console.log(bookTitle);
+
+// myLibrary.forEach((book) => {
+//   let bookTitles = myLibrary.title;
+//   console.log(bookTitles);
+// });
+
+
 let myLibrarysLastItem = myLibrary.slice(-1);
 
 let length = myLibrary.length;
@@ -43,7 +52,7 @@ const bookInfo = myLibrary.map(
 );
 console.log(bookInfo);
 // Use bookInfo.length to auto-generate # of cards.
-console.log(bookInfo.length);
+let amountOfBooks = bookInfo.length;
 
 const cardBookInfo = myLibrary.map(
   (Book) =>
@@ -78,8 +87,6 @@ function addBookToLibrary() {
       fillCards();
     });
     clearForm();
-
-    
   } else {
     alert("Please fill out every form entry.");
   }
@@ -96,7 +103,7 @@ function fillCards() {
   list.innerText = itemBookInfo;
   for (let i = 0; i < myLibrary.length; i++) {
     list += myLibrary[i];
-    cards.append(cardBookInfo);
+    cards.append(bookTitle);
   }
   // list.innerText = itemBookInfo;
   // myLibrary.forEach(length => cards.appendChild(list));
