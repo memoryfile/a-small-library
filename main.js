@@ -5,6 +5,7 @@ let cards = document.getElementById("cardText");
 let cardsText = cards.querySelectorAll("#cardText");
 // Try cardsText.createElement
 let list = document.createElement("li");
+let allCards = document.querySelectorAll("#card");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -71,13 +72,14 @@ function addBookToLibrary() {
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
   if (!(title == "" || author == "" || pages == "")) {
-    myLibrary.push(new Book(title, author, pages, read));
-    console.log(myLibrary);
+    myLibrary.forEach((item) => {
+      myLibrary.push(new Book(title, author, pages, read));
+      console.log(myLibrary);
+      fillCards();
+    });
     clearForm();
 
-    // updateCards();
-    // existingBooks();
-    fillCards();
+    
   } else {
     alert("Please fill out every form entry.");
   }
