@@ -1,4 +1,10 @@
-let cards = document.getElementById("cardText");
+const body = document.body;
+
+// WIP: fix layout/card referencing so I can generate new cards
+const layout = document.getElementById(".layout");
+layout.append("Hi");
+
+const cards = document.getElementById("cardText");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -58,3 +64,5 @@ function removeBook() {
   console.log("Removing the last book in the array.");
   logLibrary();
 }
+
+function createCard() {}
