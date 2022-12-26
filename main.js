@@ -1,13 +1,15 @@
+const body = document.body;
 let wholeArrayList = document.getElementById("myList");
 let cards = document.getElementById("cardText");
-// let layout = document.getElementById(".layout");
+let layout = document.getElementById(".layout");
 // let layoutCards = layout.querySelectorAll("#card");
 let cardsText = cards.querySelectorAll("#cardText");
 // Try cardsText.createElement
 let list = document.createElement("li");
 let defaultCards = document.querySelectorAll("#defaultCard");
 let allCards = document.querySelectorAll("#card");
-// let layout = document.querySelector(".layout");
+const card = layout.createElement("card");
+body.append(card);
 
 function Book(title, author, pages, read) {
   this.title = title;

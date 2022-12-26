@@ -19,7 +19,7 @@
         </p>
       </div>
 
-      <div class="form">
+      <form action="" method="post" id="form">
         <div>
           <label for="title">Title:</label>
           <input type="text" name="title" id="title" required />
@@ -39,7 +39,7 @@
           <label for="read">Have you finished reading this?</label>
           <input type="checkbox" name="read" id="read" />
         </div>
-      </div>
+      </form>
 
       <div class="buttons">
         <button onclick="addBookToLibrary()" id="btn">Add book</button>
@@ -50,7 +50,7 @@
       </div>
 
       <!-- Will post to a 404 once I fix this, so use preventDefault to fix that -->
-      <form action="" method="post" class="layout">
+        <div class="layout">
         <div id="card"><ul id="cardText"></ul></div>
         <!-- <div id="card"><ul id="cardText"></ul></div>
         <div id="card"><ul id="cardText"></ul></div>
@@ -60,7 +60,7 @@
         <div id="card"><ul id="cardText"></ul></div>
         <div id="card"><ul id="cardText"></ul></div>
         <div id="card"><ul id="cardText"></ul></div> -->
-      </form>
+      </div>
 
       <div class="footer"><p>Cooper Lewis (memoryfile) 2022</p></div>
     </div>
