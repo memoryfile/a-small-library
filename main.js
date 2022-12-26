@@ -114,6 +114,7 @@ function newCard() {}
 //   existingBooks();
 // }
 
+// WIP - clears array, but not card(s)
 function clearMyLibrary() {
   myLibrary.length = 0;
   myLibrary;
