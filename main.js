@@ -91,6 +91,11 @@ function addBookToLibrary() {
   }
 }
 
+// function refreshCards() {
+//   cardsText = "";
+//   console.log("Cleared.");
+// }
+
 // Provides a legible list of all array items and adds it to a card.
 // function existingBooks() {
 //   list.innerText = cardBookInfo;
