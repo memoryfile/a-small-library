@@ -7,7 +7,7 @@ let cardsText = cards.querySelectorAll("#cardText");
 let list = document.createElement("li");
 let defaultCards = document.querySelectorAll("#defaultCard");
 let allCards = document.querySelectorAll("#card");
-let layout = document.getElementById(".layout");
+// let layout = document.querySelector(".layout");
 
 function Book(title, author, pages, read) {
   this.title = title;
