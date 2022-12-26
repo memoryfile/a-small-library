@@ -64,7 +64,7 @@ function clearForm() {
   document.getElementById("read").value = "";
 }
 
-// Adds a book to the array and clears the form inputs. WIP: check for empty form.
+// Adds a book to the array and clears the form inputs. (working)
 function addBookToLibrary() {
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
@@ -78,7 +78,6 @@ function addBookToLibrary() {
     // updateCards();
     // existingBooks();
     fillCards();
-    // Alert seems to not be functioning
   } else {
     alert("Please fill out every form entry.");
   }
