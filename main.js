@@ -32,7 +32,7 @@ const seaOfTranquility = new Book(
 
 let myLibrary = [malibu, seaOfTranquility];
 
-let bookTitle = myLibrary[1].title;
+let bookTitle = myLibrary[0].title;
 console.log(bookTitle);
 
 // myLibrary.forEach((book) => {
