@@ -1,10 +1,5 @@
 let cards = document.getElementById("cardText");
 
-let title = document.getElementById("title").value;
-let author = document.getElementById("author").value;
-let pages = document.getElementById("pages").value;
-let read = document.getElementById("read").value;
-
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -27,6 +22,10 @@ const seaOfTranquility = new Book(
 );
 
 let myLibrary = [malibu, seaOfTranquility];
+
+function logLibrary() {
+  console.log("Here's the library", myLibrary);
+}
 
 let bookTitle = myLibrary[0].title;
 
@@ -55,6 +54,7 @@ function clearForm() {
 }
 
 function removeBook() {
-    myLibrary.pop();
-    console.log("Removing the last book in the array.")
+  myLibrary.pop();
+  console.log("Removing the last book in the array.");
+  logLibrary();
 }
