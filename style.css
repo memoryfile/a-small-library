@@ -41,11 +41,11 @@ p {
 
 /* Form */
 
-.form {
+#form {
   display: grid;
 }
 
-.form > div {
+#form > div {
   display: grid;
   grid-auto-flow: row;
   gap: 10px;
