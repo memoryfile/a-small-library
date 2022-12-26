@@ -5,7 +5,9 @@ let cards = document.getElementById("cardText");
 let cardsText = cards.querySelectorAll("#cardText");
 // Try cardsText.createElement
 let list = document.createElement("li");
+let defaultCards = document.querySelectorAll("#defaultCard");
 let allCards = document.querySelectorAll("#card");
+let layout = document.getElementById(".layout");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -34,12 +36,6 @@ let myLibrary = [malibu, seaOfTranquility];
 
 let bookTitle = myLibrary[0].title;
 console.log(bookTitle);
-
-// myLibrary.forEach((book) => {
-//   let bookTitles = myLibrary.title;
-//   console.log(bookTitles);
-// });
-
 
 let myLibrarysLastItem = myLibrary.slice(-1);
 
@@ -81,12 +77,11 @@ function addBookToLibrary() {
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
   if (!(title == "" || author == "" || pages == "")) {
-    myLibrary.forEach((item) => {
-      myLibrary.push(new Book(title, author, pages, read));
-      console.log(myLibrary);
-      fillCards();
-    });
+    myLibrary.push(new Book(title, author, pages, read));
+    console.log(myLibrary);
+    cards.append(bookTitle);
     clearForm();
+    uponAddingArrayItem();
   } else {
     alert("Please fill out every form entry.");
   }
@@ -105,16 +100,30 @@ function fillCards() {
     list += myLibrary[i];
     cards.append(bookTitle);
   }
-  // list.innerText = itemBookInfo;
-  // myLibrary.forEach(length => cards.appendChild(list));
 }
 
-// Generate new cards with values mapped to array values.
-function newCard() {}
+function uponAddingArrayItem() {
+  for (let i = 0; i < myLibrary.length; i++) {
+    cards.append(bookTitle);
+    layout.createElement("#card");
+    myLibrary.slice(-1);
+  }
+}
 
-// function clearCards() {
-//   cards.append("");
+// Provides two books by default in the first two cards.
+// function addtoDefaultCards() {
+//   defaultCards.append(bookTitle);
 // }
+
+// Generate new cards with values mapped to array values.
+function newCard() {
+  layout.createElement("#card");
+}
+
+// Non-working
+function clearCards() {
+  cards.append("");
+}
 
 // WIP - clears list of books and adds updated array list back.
 // function updateCards() {
@@ -142,10 +151,5 @@ function clearMyLibrary() {
 // existingBooks();
 
 // To fill each card with info.
-fillCards();
-
-// function addtoLayout() {
-//   layout.createElement("li");
-// }
-
-// addtoLayout();
+// fillCards();
+cards.append(bookTitle);

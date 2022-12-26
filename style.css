@@ -126,6 +126,7 @@ button:focus-visible {
   background-color: #69d2e7;
   border-radius: 5px;
   margin: 10px;
+  max-height: 500px;
 }
 
 /* Non-functioning - how should I reference the inner card text? */
