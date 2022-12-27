@@ -3,7 +3,14 @@ const body = document.body;
 const layout = document.querySelector(".layout");
 const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
-// layout.append(card);
+
+// Once working, add to addBookToLibrary()
+function appendCardTest() {
+  layout.append(card);
+}
+
+// WIP generating cards
+// First card is the 'default' card - I'll grab its properties and apply them to the newly appended 'newCards'
 
 const cardsText = document.getElementById("cardText");
 
@@ -66,4 +73,9 @@ function removeBook() {
   logLibrary();
 }
 
-function createCard() {}
+function createCard() {
+  const newCards = document.createElement("newCards");
+  layout.appendChild(newCards);
+}
+
+createCard();

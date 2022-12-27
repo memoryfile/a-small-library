@@ -129,6 +129,14 @@ button:focus-visible {
   max-height: 500px;
 }
 
+.newCards {
+  border: medium dashed black;
+  background-color: #69d2e7;
+  border-radius: 5px;
+  margin: 10px;
+  max-height: 500px;
+}
+
 /* Non-functioning - how should I reference the inner card text? */
 .layout > li {
   display: grid;
