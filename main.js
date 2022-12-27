@@ -6,6 +6,7 @@ const card = document.querySelector(".card");
 
 // Once working, add to addBookToLibrary()
 function appendCardTest() {
+  // invisible
   layout.append(card);
 }
 
@@ -75,7 +76,7 @@ function removeBook() {
 
 function createCard() {
   const newCards = document.createElement("newCards");
+  // invisible
   layout.appendChild(newCards);
+  console.log("Clicked")
 }
-
-createCard();

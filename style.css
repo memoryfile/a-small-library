@@ -129,7 +129,7 @@ button:focus-visible {
   max-height: 500px;
 }
 
-.newCards {
+.layout > .newCards {
   border: medium dashed black;
   background-color: #69d2e7;
   border-radius: 5px;
