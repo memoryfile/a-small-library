@@ -1,7 +1,7 @@
 const body = document.body;
 
 // WIP: fix layout/card referencing so I can generate new cards
-const layout = document.getElementById(".layout");
+const layout = document.querySelector(".layout");
 layout.append("Hi");
 
 const cards = document.getElementById("cardText");
