@@ -1,10 +1,11 @@
 const body = document.body;
 
-// WIP: fix layout/card referencing so I can generate new cards
 const layout = document.querySelector(".layout");
-layout.append("Hi");
+const cards = document.querySelectorAll(".card");
+const card = document.querySelector(".card");
+// layout.append(card);
 
-const cards = document.getElementById("cardText");
+const cardsText = document.getElementById("cardText");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -43,7 +44,7 @@ function addBookToLibrary() {
   if (!(title == "" || author == "" || pages == "")) {
     myLibrary.push(new Book(title, author, pages, read));
     console.log(myLibrary);
-    cards.append(bookTitle);
+    cardsText.append(bookTitle);
     clearForm();
   } else {
     alert("Please fill out every form entry.");
