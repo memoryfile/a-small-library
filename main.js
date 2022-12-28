@@ -5,9 +5,6 @@ const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
 const newCards = document.createElement("newCards");
 
-// WIP generating cards
-// First card is the 'default' card - I'll grab its properties and apply them to the newly appended 'newCards'
-
 const cardsText = document.getElementById("cardText");
 
 function Book(title, author, pages, read) {
@@ -44,17 +41,15 @@ function createBook() {
   myLibrary.push(new Book(title, author, pages, read));
 }
 
+// Grab last book in (immutable) myLibrary array
 function isolateBook() {
   logLibrary();
   currentBook.push(myLibrary.slice(-1));
-
-  // Actually remove the last book in the array
-  // myLibrary.pop();
-
   console.log(currentBook);
 }
 
-let bookTitle = myLibrary[0].title;
+// WIP, currentBook isn't defined because only isolateBook interfaces with it on an array level
+let bookTitle = currentBook[0].title;
 
 function addBookToLibrary() {
   let title = document.getElementById("title").value;
@@ -64,16 +59,14 @@ function addBookToLibrary() {
   if (!(title == "" || author == "" || pages == "")) {
     myLibrary.push(new Book(title, author, pages, read));
     createCard();
-    console.log(myLibrary);
     // layout.querySelector('ul').append(...myLibrary.map(createCard));
+    isolateBook();
     newCards.append(bookTitle);
     clearForm();
   } else {
     alert("Please fill out every form entry.");
   }
 }
-
-// Reimplement working functions and simplify them
 
 function clearForm() {
   document.getElementById("title").value = "";
