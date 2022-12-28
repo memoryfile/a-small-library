@@ -36,6 +36,14 @@ let myLibrary = [malibu, seaOfTranquility];
 // Push and pop from this array as you get books from myLibrary and input them into the cards.
 let currentBook = [];
 
+const bookInfo = myLibrary.map(
+  (Book) => `${Book.title} ${Book.author} ${Book.pages} ${Book.read}`
+);
+
+let text = document.createTextNode(bookInfo);
+
+newCards.appendChild(text);
+
 function logLibrary() {
   console.log("Here's the library:", myLibrary);
 }
@@ -99,5 +107,6 @@ function createCard() {
   newCards.style.maxHeight = `500px`;
 
   layout.appendChild(newCards);
+  newCards.appendChild(text);
   console.log("Created a new card.");
 }
