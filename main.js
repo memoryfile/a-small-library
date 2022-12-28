@@ -4,11 +4,15 @@ const layout = document.querySelector(".layout");
 const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
 
-// WIP - adding innerText to cards
 const newCards = document.createElement("div");
-layout.appendChild(newCards);
 const cardText = document.createElement("p");
+
+layout.appendChild(newCards);
 newCards.appendChild(cardText);
+
+// cardText.style.
+cardText.style.gap = `8px`;
+cardText.style.display = `grid`;
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -41,8 +45,7 @@ const bookInfo = myLibrary.map(
 );
 
 let text = document.createTextNode(bookInfo);
-
-newCards.appendChild(text);
+cardText.appendChild(text);
 
 function logLibrary() {
   console.log("Here's the library:", myLibrary);
@@ -74,9 +77,6 @@ function addBookToLibrary() {
     createCard();
     // layout.querySelector('ul').append(...myLibrary.map(createCard));
     isolateBook();
-    // newCards.innerText(test);
-    // newCards.appendChild(test);
-    // newCards.append(bookTitle);
     clearForm();
   } else {
     alert("Please fill out every form entry.");
@@ -106,7 +106,5 @@ function createCard() {
   newCards.style.margin = `10px`;
   newCards.style.maxHeight = `500px`;
 
-  layout.appendChild(newCards);
-  newCards.appendChild(text);
   console.log("Created a new card.");
 }
