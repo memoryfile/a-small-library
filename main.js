@@ -38,6 +38,9 @@ const seaOfTranquility = new Book(
 
 let myLibrary = [malibu, seaOfTranquility];
 
+// Push and pop from this array as you get books from myLibrary and input them into the cards.
+let currentBook = [];
+
 function logLibrary() {
   console.log("Here's the library", myLibrary);
 }
