@@ -4,12 +4,6 @@ const layout = document.querySelector(".layout");
 const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
 
-// Once working, add to addBookToLibrary()
-function appendCardTest() {
-  // invisible
-  layout.append(card);
-}
-
 // WIP generating cards
 // First card is the 'default' card - I'll grab its properties and apply them to the newly appended 'newCards'
 
@@ -79,7 +73,13 @@ function removeBook() {
 
 function createCard() {
   const newCards = document.createElement("newCards");
-  // invisible
+
+  newCards.style.border = `medium dashed black`;
+  newCards.style.backgroundColor = `#69d2e7`;
+  newCards.style.borderRadius = `5px`;
+  newCards.style.margin = `10px`;
+  newCards.style.maxHeight = `500px`;
+
   layout.appendChild(newCards);
-  console.log("Clicked")
+  console.log("Clicked");
 }
