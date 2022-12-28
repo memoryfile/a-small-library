@@ -39,6 +39,10 @@ function logLibrary() {
   console.log("Here's the library", myLibrary);
 }
 
+function createBook() {
+  myLibrary.push(new Book(title, author, pages, read));
+}
+
 let bookTitle = myLibrary[0].title;
 
 function addBookToLibrary() {
@@ -48,7 +52,9 @@ function addBookToLibrary() {
   let read = document.getElementById("read").value;
   if (!(title == "" || author == "" || pages == "")) {
     myLibrary.push(new Book(title, author, pages, read));
+    createCard();
     console.log(myLibrary);
+    // layout.querySelector('ul').append(...myLibrary.map(createCard));
     cardsText.append(bookTitle);
     clearForm();
   } else {
@@ -81,5 +87,5 @@ function createCard() {
   newCards.style.maxHeight = `500px`;
 
   layout.appendChild(newCards);
-  console.log("Clicked");
+  console.log("Created a new card.");
 }
