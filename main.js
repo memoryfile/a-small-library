@@ -3,9 +3,12 @@ const body = document.body;
 const layout = document.querySelector(".layout");
 const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
-const newCards = document.createElement("newCards");
 
-const cardsText = document.getElementById("cardText");
+// WIP - adding innerText to cards
+const newCards = document.createElement("div");
+layout.appendChild(newCards);
+const cardText = document.createElement("p");
+newCards.appendChild(cardText);
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -34,7 +37,7 @@ let myLibrary = [malibu, seaOfTranquility];
 let currentBook = [];
 
 function logLibrary() {
-  console.log("Here's the library", myLibrary);
+  console.log("Here's the library:", myLibrary);
 }
 
 function createBook() {
@@ -49,7 +52,9 @@ function isolateBook() {
 }
 
 // WIP, currentBook isn't defined because only isolateBook interfaces with it on an array level
-let bookTitle = currentBook[0].title;
+// let bookTitle = currentBook[0].title;
+
+let test = "hi";
 
 function addBookToLibrary() {
   let title = document.getElementById("title").value;
@@ -61,7 +66,9 @@ function addBookToLibrary() {
     createCard();
     // layout.querySelector('ul').append(...myLibrary.map(createCard));
     isolateBook();
-    newCards.append(bookTitle);
+    // newCards.innerText(test);
+    // newCards.appendChild(test);
+    // newCards.append(bookTitle);
     clearForm();
   } else {
     alert("Please fill out every form entry.");
