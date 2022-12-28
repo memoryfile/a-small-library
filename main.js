@@ -3,6 +3,7 @@ const body = document.body;
 const layout = document.querySelector(".layout");
 const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
+const newCards = document.createElement("newCards");
 
 // WIP generating cards
 // First card is the 'default' card - I'll grab its properties and apply them to the newly appended 'newCards'
@@ -43,6 +44,16 @@ function createBook() {
   myLibrary.push(new Book(title, author, pages, read));
 }
 
+function isolateBook() {
+  logLibrary();
+  currentBook.push(myLibrary.slice(-1));
+
+  // Actually remove the last book in the array
+  // myLibrary.pop();
+
+  console.log(currentBook);
+}
+
 let bookTitle = myLibrary[0].title;
 
 function addBookToLibrary() {
@@ -55,7 +66,7 @@ function addBookToLibrary() {
     createCard();
     console.log(myLibrary);
     // layout.querySelector('ul').append(...myLibrary.map(createCard));
-    cardsText.append(bookTitle);
+    newCards.append(bookTitle);
     clearForm();
   } else {
     alert("Please fill out every form entry.");
@@ -80,6 +91,7 @@ function removeBook() {
 function createCard() {
   const newCards = document.createElement("newCards");
 
+  // Define newCards CSS
   newCards.style.border = `medium dashed black`;
   newCards.style.backgroundColor = `#69d2e7`;
   newCards.style.borderRadius = `5px`;
