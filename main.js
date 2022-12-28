@@ -10,6 +10,9 @@ layout.appendChild(newCards);
 const cardText = document.createElement("p");
 newCards.appendChild(cardText);
 
+cardText.style.gap = `8px`;
+cardText.style.display = `grid`;
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -31,7 +34,9 @@ const seaOfTranquility = new Book(
   "Not read"
 );
 
-let myLibrary = [malibu, seaOfTranquility];
+// let myLibrary = [malibu, seaOfTranquility];
+let myLibrary = [malibu];
+
 
 // Push and pop from this array as you get books from myLibrary and input them into the cards.
 let currentBook = [];
@@ -40,9 +45,27 @@ const bookInfo = myLibrary.map(
   (Book) => `${Book.title} ${Book.author} ${Book.pages} ${Book.read}`
 );
 
+const bookTitle = myLibrary.map(
+  (Book) => `${Book.title}`
+);
+
+const bookAuthor = myLibrary.map(
+  (Book) => `${Book.author}`
+);
+
+const bookPages = myLibrary.map(
+  (Book) => `${Book.pages}`
+);
+
+const bookRead = myLibrary.map(
+  (Book) => `${Book.read}`
+);
+
+
+
 let text = document.createTextNode(bookInfo);
 
-newCards.appendChild(text);
+cardText.appendChild(text);
 
 function logLibrary() {
   console.log("Here's the library:", myLibrary);
@@ -56,6 +79,7 @@ function createBook() {
 function isolateBook() {
   logLibrary();
   currentBook.push(myLibrary.slice(-1));
+  removeBook();
   console.log(currentBook);
 }
 
@@ -74,9 +98,6 @@ function addBookToLibrary() {
     createCard();
     // layout.querySelector('ul').append(...myLibrary.map(createCard));
     isolateBook();
-    // newCards.innerText(test);
-    // newCards.appendChild(test);
-    // newCards.append(bookTitle);
     clearForm();
   } else {
     alert("Please fill out every form entry.");
