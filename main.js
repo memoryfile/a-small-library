@@ -44,6 +44,22 @@ const bookInfo = myLibrary.map(
   (Book) => `${Book.title} ${Book.author} ${Book.pages} ${Book.read}`
 );
 
+const bookTitle = myLibrary.map(
+  (Book) => `${Book.title}`
+);
+
+const bookAuthor = myLibrary.map(
+  (Book) => `${Book.author}`
+);
+
+const bookPages = myLibrary.map(
+  (Book) => `${Book.pages}`
+);
+
+const bookRead = myLibrary.map(
+  (Book) => `${Book.read}`
+);
+
 let text = document.createTextNode(bookInfo);
 cardText.appendChild(text);
 
@@ -59,6 +75,7 @@ function createBook() {
 function isolateBook() {
   logLibrary();
   currentBook.push(myLibrary.slice(-1));
+  myLibrary.pop();
   console.log(currentBook);
 }
 
