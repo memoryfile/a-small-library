@@ -5,6 +5,7 @@ const cards = document.querySelectorAll(".card");
 const card = document.querySelector(".card");
 
 // WIP - adding innerText to cards
+
 const newCards = document.createElement("div");
 layout.appendChild(newCards);
 const cardText = document.createElement("p");
@@ -60,8 +61,6 @@ const bookPages = myLibrary.map(
 const bookRead = myLibrary.map(
   (Book) => `${Book.read}`
 );
-
-
 
 let text = document.createTextNode(bookInfo);
 
@@ -128,6 +127,9 @@ function createCard() {
   newCards.style.maxHeight = `500px`;
 
   layout.appendChild(newCards);
-  newCards.appendChild(text);
+  // newCards.appendChild(text);
+  // const cardText = document.createElement("p");
+  newCards.appendChild(cardText)
+  cardText.appendChild(text);
   console.log("Created a new card.");
 }
